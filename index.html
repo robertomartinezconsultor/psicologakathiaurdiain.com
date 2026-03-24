@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Psicóloga Kathia Urdiaín – Terapia breve en San Antonio y México</title>
-<meta name="description" content="Psicóloga especializada en terapia breve para ansiedad, depresión, estrés, trauma, duelo, pareja, autoestima y más. Ayuda inmediata en San Antonio, Texas y México.">
+<meta name="description" content="Psicóloga especializada en terapia breve. Ayuda inmediata para ansiedad, depresión, estrés y más. Agenda por WhatsApp.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
-  /* Custom styles for better visual balance */
+  /* Imagen de fondo de la sección principal */
   .hero-bg {
     background-image: url('img/hero-image.png');
     background-size: cover;
@@ -16,133 +16,63 @@
 </style>
 </head>
 <body class="text-gray-800 bg-gray-50">
-<!-- Header navigation -->
-<header class="bg-teal-600 text-white sticky top-0 z-50">
+<!-- Cabecera con logo y menú -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
   <nav class="container mx-auto flex items-center justify-between p-4">
-    <div class="text-xl font-bold">Kathia Urdiaín</div>
-    <ul class="hidden md:flex space-x-6">
-      <li><a href="index.html" class="hover:underline">Inicio</a></li>
-      <li><a href="sobre-mi.html" class="hover:underline">Sobre mí</a></li>
-      <li><a href="terapia-breve.html" class="hover:underline">Terapia breve</a></li>
-      <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-      <li><a href="#especialidades" class="hover:underline">Especialidades</a></li>
-      <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-      <li><a href="index-en.html" class="hover:underline">EN</a></li>
+    <div class="flex items-center gap-2">
+      <img src="img/logo.png" alt="Logotipo" class="h-10">
+      <span class="font-semibold">Kathia Urdiaín</span>
+    </div>
+    <ul class="hidden md:flex space-x-6 text-sm">
+      <li><a href="#especialidades" class="hover:text-teal-600">Especialidades</a></li>
+      <li><a href="sobre-mi.html" class="hover:text-teal-600">Sobre mí</a></li>
+      <li><a href="contacto.html" class="hover:text-teal-600">Contacto</a></li>
     </ul>
-    <!-- Mobile menu toggle could be added here if needed -->
+    <a href="https://wa.me/528116152929" class="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700">WhatsApp</a>
   </nav>
 </header>
-
-<!-- Hero section -->
+<!-- Sección principal -->
 <section class="hero-bg text-white">
-  <div class="bg-teal-600 bg-opacity-70">
-    <div class="container mx-auto py-20 px-4 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Terapia breve en San Antonio y México</h1>
-        <p class="mb-6 text-lg">Ayuda inmediata para ansiedad, depresión, estrés y más. Un enfoque humano y eficaz orientado a soluciones.</p>
-        <a href="contacto.html" class="inline-block bg-white text-teal-700 font-semibold py-3 px-6 rounded-md hover:bg-gray-100">Contáctame</a>
-      </div>
-      <div class="md:w-1/2 mt-8 md:mt-0 hidden md:block">
-        <!-- Optional additional image or leave blank -->
-      </div>
+  <div class="bg-black bg-opacity-50">
+    <div class="container mx-auto py-24 px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Vuelve a sentirte bien</h1>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">Terapia breve efectiva para ansiedad, depresión, estrés y más. Atención profesional, cercana y orientada a resultados.</p>
+      <a href="https://wa.me/528116152929" class="bg-white text-teal-700 font-semibold px-8 py-4 rounded-md text-lg hover:bg-gray-100">Escribir por WhatsApp</a>
     </div>
   </div>
 </section>
-
 <!-- Especialidades -->
 <section id="especialidades" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold mb-8 text-center">Especialidades</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <a href="ansiedad.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Ansiedad</h3>
-      <p class="text-sm">Aprende a calmar tu mente y recuperar la tranquilidad.</p>
-    </a>
-    <a href="depresion.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Depresión</h3>
-      <p class="text-sm">Recupera el ánimo y la esperanza con un enfoque compasivo.</p>
-    </a>
-    <a href="estres.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Estrés & Burnout</h3>
-      <p class="text-sm">Maneja la carga laboral y emocional antes de que afecte tu salud.</p>
-    </a>
-    <a href="trauma.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Trauma & PTSD</h3>
-      <p class="text-sm">Afronta experiencias traumáticas con apoyo profesional.</p>
-    </a>
-    <a href="duelo.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Duelo y pérdidas</h3>
-      <p class="text-sm">Recibe apoyo para superar la pérdida de un ser querido.</p>
-    </a>
-    <a href="pareja.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Pareja</h3>
-      <p class="text-sm">Fortalece tu relación y resuelve conflictos de manera respetuosa.</p>
-    </a>
-    <a href="autoestima.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Autoestima</h3>
-      <p class="text-sm">Construye una autoestima saludable y segura.</p>
-    </a>
-    <a href="fobias.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Fobias</h3>
-      <p class="text-sm">Supera miedos irracionales con técnicas efectivas.</p>
-    </a>
-    <a href="tdah.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">TDAH</h3>
-      <p class="text-sm">Herramientas para mejorar la atención y organización.</p>
-    </a>
-    <a href="regulacion.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-      <h3 class="font-semibold mb-2">Regulación emocional</h3>
-      <p class="text-sm">Aprende a manejar tus emociones de manera saludable.</p>
-    </a>
+  <h2 class="text-3xl font-bold text-center mb-12">¿En qué puedo ayudarte?</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Ansiedad</h3><p class="text-sm">Aprende a recuperar la calma y controlar pensamientos.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Depresión</h3><p class="text-sm">Recupera motivación, energía y sentido.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Estrés</h3><p class="text-sm">Reduce la sobrecarga emocional y mental.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Pareja</h3><p class="text-sm">Mejora comunicación y conexión emocional.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Autoestima</h3><p class="text-sm">Fortalece tu seguridad y confianza personal.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Duelo</h3><p class="text-sm">Acompañamiento en procesos de pérdida.</p></div>
   </div>
 </section>
-
-<!-- Sobre mí resumen -->
+<!-- Sobre mí -->
 <section class="bg-gray-100 py-16">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-    <div class="md:w-1/2">
-      <img src="img/kathia.jpg" alt="Foto de Kathia Urdiaín" class="rounded-lg shadow-lg">
-    </div>
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+    <div class="md:w-1/2"><img src="img/kathia.jpg" alt="Kathia Urdiaín" class="rounded-lg shadow-lg"></div>
     <div class="md:w-1/2">
       <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
-      <p class="mb-6 text-lg">Soy psicóloga con maestría en terapia breve orientada a soluciones y más de diez años de experiencia ayudando a personas y parejas a superar la ansiedad, la depresión, el estrés y otros retos emocionales. Mi enfoque es humano, empático y orientado a resultados.</p>
-      <a href="sobre-mi.html" class="text-teal-600 font-semibold hover:underline">Conoce más sobre mi historia</a>
+      <p class="mb-6">Soy psicóloga con más de 10 años de experiencia en terapia breve orientada a soluciones. Mi enfoque es práctico, humano y enfocado en ayudarte a sentirte mejor en el menor tiempo posible.</p>
+      <a href="sobre-mi.html" class="text-teal-600 font-semibold">Conoce más →</a>
     </div>
   </div>
 </section>
-
-<!-- Call to action -->
-<section class="bg-teal-600 py-12 text-white">
-  <div class="container mx-auto text-center px-4">
-    <h2 class="text-3xl font-bold mb-4">¿Listo para empezar tu cambio?</h2>
-    <p class="mb-6 text-lg">Da el primer paso hacia tu bienestar con una conversación gratuita por email.</p>
-    <a href="contacto.html" class="inline-block bg-white text-teal-700 font-semibold py-3 px-6 rounded-md hover:bg-gray-100">Escríbeme</a>
-  </div>
+<!-- CTA final -->
+<section class="bg-teal-600 text-white py-16 text-center">
+  <h2 class="text-3xl font-bold mb-4">Da el primer paso hoy</h2>
+  <p class="mb-8">Escríbeme por WhatsApp y agenda tu primera sesión.</p>
+  <a href="https://wa.me/528116152929" class="bg-white text-teal-700 px-8 py-4 rounded-md font-semibold">Enviar mensaje</a>
 </section>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-gray-300 py-10">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
-    <div class="mb-6 md:mb-0">
-      <h3 class="font-semibold text-lg mb-2">Kathia Urdiaín</h3>
-      <p>Psicóloga especializada en terapia breve</p>
-    </div>
-    <div class="mb-6 md:mb-0">
-      <h4 class="font-semibold text-lg mb-2">Contacto</h4>
-      <p>Email: <a href="mailto:info@psicologakathiaurdiain.com" class="text-teal-400 hover:underline">info@psicologakathiaurdiain.com</a></p>
-    </div>
-    <div>
-      <h4 class="font-semibold text-lg mb-2">Navegación</h4>
-      <ul class="space-y-1">
-        <li><a href="index.html" class="hover:underline">Inicio</a></li>
-        <li><a href="sobre-mi.html" class="hover:underline">Sobre mí</a></li>
-        <li><a href="terapia-breve.html" class="hover:underline">Terapia breve</a></li>
-        <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-        <li><a href="#especialidades" class="hover:underline">Especialidades</a></li>
-        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="text-center mt-6 text-sm">© 2026 Kathia Urdiaín. Todos los derechos reservados.</p>
+<!-- Pie de página -->
+<footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
+  © 2026 Kathia Urdiaín · Psicóloga
 </footer>
 </body>
 </html>

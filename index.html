@@ -1,78 +1,630 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Psicóloga Kathia Urdiaín – Terapia breve en San Antonio y México</title>
-<meta name="description" content="Psicóloga especializada en terapia breve. Ayuda inmediata para ansiedad, depresión, estrés y más. Agenda por WhatsApp.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<style>
-  /* Imagen de fondo de la sección principal */
-  .hero-bg {
-    background-image: url('img/hero-image.png');
-    background-size: cover;
-    background-position: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Psicóloga Kathia Urdiaín | Terapia en Línea México & Presencial San Antonio TX</title>
+  <meta name="description" content="Psicóloga Kathia Urdiaín: terapia breve orientada a soluciones. Consultas en línea para México y presenciales en San Antonio, Texas. Ansiedad, depresión, estrés, pareja y más. Primera consulta gratis." />
+  <meta name="keywords" content="psicóloga San Antonio Texas, terapia en línea México, terapia en línea Monterrey, psicóloga Monterrey, terapia breve, ansiedad, depresión, psicóloga bilingüe" />
+  <meta name="author" content="Kathia Urdiaín" />
+  <link rel="canonical" href="https://www.psicologakathiaurdiain.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Psicóloga Kathia Urdiaín | Terapia Online México & San Antonio TX" />
+  <meta property="og:description" content="Terapia breve, efectiva y humana. Online para México · Presencial en San Antonio TX. Primera consulta gratuita." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.psicologakathiaurdiain.com/" />
+  <meta property="og:image" content="https://www.psicologakathiaurdiain.com/img/kathia.jpg" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Psicóloga Kathia Urdiaín",
+    "description": "Terapia breve orientada a soluciones. Online para México, presencial en San Antonio TX.",
+    "url": "https://www.psicologakathiaurdiain.com",
+    "telephone": "+52-811-615-2929",
+    "image": "https://www.psicologakathiaurdiain.com/img/kathia.jpg",
+    "priceRange": "$$",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "San Antonio",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    ],
+    "sameAs": ["https://wa.me/528116152929"]
   }
-</style>
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #faf7f2;
+      --warm-white: #f5f0e8;
+      --sage: #8a9e8c;
+      --sage-dark: #5c7a5e;
+      --clay: #c4876a;
+      --clay-light: #e8c4ae;
+      --charcoal: #2c2c2c;
+      --mid-grey: #6b6b6b;
+      --light-grey: #e8e4de;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--charcoal); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; color: var(--charcoal); text-decoration: none; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; color: var(--mid-grey); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--sage-dark); }
+    .nav-cta { background: var(--sage-dark) !important; color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.8rem !important; }
+    .nav-cta:hover { background: var(--clay) !important; }
+    .lang-switch { font-size: 0.75rem; color: var(--mid-grey); text-decoration: none; border: 1px solid var(--light-grey); padding: 0.3rem 0.7rem; border-radius: 1rem; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 8rem 5% 4rem; gap: 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -10%; right: -5%; width: 55%; height: 110%;
+      background: linear-gradient(135deg, var(--warm-white) 0%, var(--clay-light) 40%, var(--sage) 100%);
+      opacity: 0.25; border-radius: 40% 60% 50% 50% / 40% 40% 60% 60%; z-index: 0;
+    }
+    .hero-text { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--sage); color: white; font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 2rem; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.6s 0.2s forwards;
+    }
+    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300; line-height: 1.15; color: var(--charcoal);
+      margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.7s 0.3s forwards;
+    }
+    .hero h1 em { font-style: italic; color: var(--sage-dark); }
+    .hero-sub {
+      font-size: 1rem; color: var(--mid-grey); max-width: 480px;
+      margin-bottom: 2rem; line-height: 1.75;
+      opacity: 0; animation: fadeUp 0.7s 0.45s forwards;
+    }
+    .hero-locations {
+      display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.7s 0.55s forwards;
+    }
+    .location-tag { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--mid-grey); font-weight: 500; }
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.7s 0.65s forwards;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--sage-dark); color: white; padding: 0.9rem 2rem;
+      border-radius: 3rem; font-size: 0.9rem; font-weight: 500;
+      text-decoration: none; transition: all 0.25s;
+      box-shadow: 0 4px 20px rgba(92, 122, 94, 0.3);
+    }
+    .btn-primary:hover { background: var(--clay); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(196, 135, 106, 0.35); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--charcoal); padding: 0.9rem 2rem;
+      border-radius: 3rem; font-size: 0.9rem; font-weight: 400;
+      text-decoration: none; border: 1.5px solid var(--light-grey); transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--sage); color: var(--sage-dark); transform: translateY(-2px); }
+    .free-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--clay-light); color: var(--clay);
+      font-size: 0.75rem; font-weight: 600; padding: 0.35rem 0.9rem;
+      border-radius: 2rem; margin-top: 1.2rem;
+      opacity: 0; animation: fadeUp 0.7s 0.75s forwards;
+    }
+    .hero-image { position: relative; z-index: 1; display: flex; justify-content: center; opacity: 0; animation: fadeIn 1s 0.5s forwards; }
+    .hero-image-wrap { position: relative; width: 380px; max-width: 100%; }
+    .hero-image-wrap img { width: 100%; height: 520px; object-fit: cover; border-radius: 50% 50% 40% 40% / 50% 50% 40% 40%; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    .hero-stat { position: absolute; background: white; border-radius: 1rem; padding: 0.9rem 1.2rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+    .hero-stat-1 { bottom: 10%; left: -8%; }
+    .hero-stat-2 { top: 15%; right: -8%; }
+    .stat-number { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--sage-dark); line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: var(--mid-grey); margin-top: 0.2rem; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--charcoal); color: rgba(255,255,255,0.7);
+      padding: 1.2rem 5%; display: flex; align-items: center;
+      justify-content: center; gap: 3rem; flex-wrap: wrap; font-size: 0.82rem; letter-spacing: 0.04em;
+    }
+    .trust-item { display: flex; align-items: center; gap: 0.6rem; }
+    .trust-item span { font-size: 1rem; }
+
+    /* SECTIONS */
+    section { padding: 6rem 5%; }
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 1rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; color: var(--charcoal); margin-bottom: 1.2rem; }
+    .section-title em { font-style: italic; color: var(--clay); }
+    .section-sub { font-size: 0.95rem; color: var(--mid-grey); max-width: 520px; line-height: 1.75; }
+
+    /* SERVICES */
+    .services { background: var(--warm-white); }
+    .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; gap: 2rem; flex-wrap: wrap; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .service-card { background: white; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: inherit; border: 1px solid transparent; transition: all 0.3s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sage), var(--clay)); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
+    .service-card:hover { border-color: var(--sage); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+    .service-card h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 0.6rem; }
+    .service-card p { font-size: 0.85rem; color: var(--mid-grey); line-height: 1.65; }
+    .service-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; color: var(--sage-dark); font-weight: 500; margin-top: 1rem; text-decoration: none; }
+
+    /* HOW */
+    .how { background: var(--cream); }
+    .how-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
+    .how-step { text-align: center; padding: 2rem 1.5rem; }
+    .step-number { font-family: var(--font-display); font-size: 4rem; font-weight: 300; color: var(--clay-light); line-height: 1; margin-bottom: 1rem; }
+    .how-step h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.6rem; }
+    .how-step p { font-size: 0.85rem; color: var(--mid-grey); line-height: 1.65; }
+
+    /* MODALITIES */
+    .modalities { background: var(--sage-dark); color: white; }
+    .modalities .section-label { color: var(--clay-light); }
+    .modalities .section-title { color: white; }
+    .modalities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3.5rem; }
+    .modality-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 1.5rem; padding: 2.5rem; transition: all 0.3s; }
+    .modality-card:hover { background: rgba(255,255,255,0.15); transform: translateY(-3px); }
+    .modality-flag { font-size: 2rem; margin-bottom: 1rem; display: block; }
+    .modality-card h3 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem; }
+    .modality-card .subtitle { font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.2rem; }
+    .modality-card p { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+    .modality-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .tag { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 2rem; }
+
+    /* FREE CTA */
+    .free-cta { background: linear-gradient(135deg, var(--clay-light), var(--warm-white)); text-align: center; padding: 5rem 5%; }
+    .free-cta-box { max-width: 600px; margin: 0 auto; }
+    .free-cta h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.2; }
+    .free-cta h2 em { font-style: italic; color: var(--clay); }
+    .free-cta p { font-size: 0.95rem; color: var(--mid-grey); margin-bottom: 2rem; line-height: 1.75; }
+    .free-pill { display: inline-block; background: var(--clay); color: white; font-size: 0.8rem; font-weight: 600; padding: 0.4rem 1.2rem; border-radius: 2rem; margin-bottom: 2rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ABOUT */
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; background: white; }
+    .about-image img { width: 100%; height: 500px; object-fit: cover; border-radius: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+    .credentials { display: flex; flex-direction: column; gap: 0.8rem; margin: 2rem 0; }
+    .credential { display: flex; align-items: center; gap: 0.8rem; font-size: 0.88rem; color: var(--mid-grey); }
+    .credential::before { content: '✓'; display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; background: var(--sage); color: white; border-radius: 50%; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--warm-white); }
+    .testimonials-header { text-align: center; margin-bottom: 3.5rem; }
+    .testimonials-header .section-sub { margin: 0 auto; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .testimonial-card { background: white; border-radius: 1.5rem; padding: 2rem; position: relative; }
+    .testimonial-card::before { content: '"'; font-family: var(--font-display); font-size: 5rem; color: var(--clay-light); position: absolute; top: 0.5rem; left: 1.5rem; line-height: 1; }
+    .testimonial-text { font-size: 0.9rem; color: var(--mid-grey); line-height: 1.75; margin-top: 2.5rem; margin-bottom: 1.5rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+    .author-avatar { width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, var(--sage), var(--clay)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; }
+    .author-name { font-size: 0.85rem; font-weight: 500; color: var(--charcoal); }
+    .author-detail { font-size: 0.75rem; color: var(--mid-grey); }
+    .stars { color: #f5a623; font-size: 0.85rem; margin-bottom: 0.3rem; }
+
+    /* FAQ */
+    .faq { background: var(--cream); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 3rem; }
+    .faq-item { background: white; border-radius: 1rem; overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.3rem 1.5rem; text-align: left; font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--charcoal); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-question::after { content: '+'; font-size: 1.3rem; color: var(--sage-dark); font-weight: 300; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-answer p { padding: 0 1.5rem 1.3rem; font-size: 0.85rem; color: var(--mid-grey); line-height: 1.7; }
+
+    /* FOOTER */
+    footer { background: var(--charcoal); color: rgba(255,255,255,0.7); padding: 3rem 5% 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+    .footer-brand { font-family: var(--font-display); font-size: 1.4rem; color: white; margin-bottom: 0.8rem; }
+    .footer-tagline { font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: 1rem; }
+    .social-btn { width: 2.2rem; height: 2.2rem; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; text-decoration: none; transition: background 0.2s; }
+    .social-btn:hover { background: var(--sage); }
+    .footer-heading { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; flex-wrap: wrap; gap: 1rem; }
+
+    /* WHATSAPP */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; background: #25D366; color: white; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.25s; }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 7rem; }
+      .hero-image { display: none; }
+      .about { grid-template-columns: 1fr; }
+      .about-image { display: none; }
+      .modalities-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links { display: none; }
+    }
+  </style>
 </head>
-<body class="text-gray-800 bg-gray-50">
-<!-- Cabecera con logo y menú -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <nav class="container mx-auto flex items-center justify-between p-4">
-    <div class="flex items-center gap-2">
-      <img src="img/logo.png" alt="Logotipo" class="h-10">
-      <span class="font-semibold">Kathia Urdiaín</span>
-    </div>
-    <ul class="hidden md:flex space-x-6 text-sm">
-      <li><a href="#especialidades" class="hover:text-teal-600">Especialidades</a></li>
-      <li><a href="sobre-mi.html" class="hover:text-teal-600">Sobre mí</a></li>
-      <li><a href="contacto.html" class="hover:text-teal-600">Contacto</a></li>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Kathia Urdiaín</a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Especialidades</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="index-en.html" class="lang-switch">🇺🇸 English</a></li>
+      <li><a href="https://wa.me/528116152929" class="nav-cta" target="_blank">Agendar cita</a></li>
     </ul>
-    <a href="https://wa.me/528116152929" class="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700">WhatsApp</a>
   </nav>
-</header>
-<!-- Sección principal -->
-<section class="hero-bg text-white">
-  <div class="bg-black bg-opacity-50">
-    <div class="container mx-auto py-24 px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Vuelve a sentirte bien</h1>
-      <p class="text-lg mb-8 max-w-2xl mx-auto">Terapia breve efectiva para ansiedad, depresión, estrés y más. Atención profesional, cercana y orientada a resultados.</p>
-      <a href="https://wa.me/528116152929" class="bg-white text-teal-700 font-semibold px-8 py-4 rounded-md text-lg hover:bg-gray-100">Escribir por WhatsApp</a>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">Consulta gratuita disponible</div>
+      <h1>El cambio que buscas<br>empieza con <em>una sesión</em></h1>
+      <p class="hero-sub">
+        Soy Kathia Urdiaín, psicóloga con más de 10 años de experiencia en terapia breve. Atiendo de forma <strong>presencial en San Antonio, Texas</strong> y <strong>en línea para México</strong>.
+      </p>
+      <div class="hero-locations">
+        <div class="location-tag"><span>🇺🇸</span> Presencial · San Antonio, TX</div>
+        <div class="location-tag"><span>🇲🇽</span> En línea · México</div>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/528116152929" class="btn-primary" target="_blank">💬 Escribir por WhatsApp</a>
+        <a href="#como-funciona" class="btn-secondary">¿Cómo funciona? →</a>
+      </div>
+      <div class="free-badge">🎁 Primera consulta gratuita de 15 min</div>
     </div>
-  </div>
-</section>
-<!-- Especialidades -->
-<section id="especialidades" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold text-center mb-12">¿En qué puedo ayudarte?</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Ansiedad</h3><p class="text-sm">Aprende a recuperar la calma y controlar pensamientos.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Depresión</h3><p class="text-sm">Recupera motivación, energía y sentido.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Estrés</h3><p class="text-sm">Reduce la sobrecarga emocional y mental.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Pareja</h3><p class="text-sm">Mejora comunicación y conexión emocional.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Autoestima</h3><p class="text-sm">Fortalece tu seguridad y confianza personal.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold mb-2">Duelo</h3><p class="text-sm">Acompañamiento en procesos de pérdida.</p></div>
-  </div>
-</section>
-<!-- Sobre mí -->
-<section class="bg-gray-100 py-16">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-    <div class="md:w-1/2"><img src="img/kathia.jpg" alt="Kathia Urdiaín" class="rounded-lg shadow-lg"></div>
-    <div class="md:w-1/2">
-      <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
-      <p class="mb-6">Soy psicóloga con más de 10 años de experiencia en terapia breve orientada a soluciones. Mi enfoque es práctico, humano y enfocado en ayudarte a sentirte mejor en el menor tiempo posible.</p>
-      <a href="sobre-mi.html" class="text-teal-600 font-semibold">Conoce más →</a>
+    <div class="hero-image">
+      <div class="hero-image-wrap">
+        <img src="img/kathia.jpg" alt="Psicóloga Kathia Urdiaín" />
+        <div class="hero-stat hero-stat-1">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="hero-stat hero-stat-2">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Pacientes atendidos</div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>✓</span> Psicóloga certificada</div>
+    <div class="trust-item"><span>✓</span> Terapia breve orientada a soluciones</div>
+    <div class="trust-item"><span>✓</span> Sesiones en español e inglés</div>
+    <div class="trust-item"><span>✓</span> Confidencialidad garantizada</div>
+    <div class="trust-item"><span>✓</span> +10 años de experiencia</div>
   </div>
-</section>
-<!-- CTA final -->
-<section class="bg-teal-600 text-white py-16 text-center">
-  <h2 class="text-3xl font-bold mb-4">Da el primer paso hoy</h2>
-  <p class="mb-8">Escríbeme por WhatsApp y agenda tu primera sesión.</p>
-  <a href="https://wa.me/528116152929" class="bg-white text-teal-700 px-8 py-4 rounded-md font-semibold">Enviar mensaje</a>
-</section>
-<!-- Pie de página -->
-<footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
-  © 2026 Kathia Urdiaín · Psicóloga
-</footer>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicios">
+    <div class="services-header">
+      <div>
+        <div class="section-label">Especialidades</div>
+        <h2 class="section-title">¿En qué puedo<br><em>ayudarte?</em></h2>
+      </div>
+      <p class="section-sub">Cada persona es única. Trabajo con un enfoque práctico y humano, orientado a resultados reales en el menor tiempo posible.</p>
+    </div>
+    <div class="services-grid">
+      <a href="ansiedad.html" class="service-card">
+        <span class="service-icon">🧘</span>
+        <h3>Ansiedad</h3>
+        <p>Aprende a recuperar la calma, manejar pensamientos intrusivos y retomar el control de tu vida diaria.</p>
+        <div class="service-link">Ver más →</div>
+      </a>
+      <a href="depresion.html" class="service-card">
+        <span class="service-icon">🌱</span>
+        <h3>Depresión</h3>
+        <p>Recupera motivación, energía y el sentido de las cosas que importan. Sin juzgarte, con apoyo real.</p>
+        <div class="service-link">Ver más →</div>
+      </a>
+      <a href="estres.html" class="service-card">
+        <span class="service-icon">⚖️</span>
+        <h3>Estrés y Burnout</h3>
+        <p>Reduce la sobrecarga emocional y mental. Aprende herramientas prácticas para recuperar el equilibrio.</p>
+        <div class="service-link">Ver más →</div>
+      </a>
+      <a href="pareja.html" class="service-card">
+        <span class="service-icon">💞</span>
+        <h3>Terapia de Pareja</h3>
+        <p>Mejora la comunicación, reconstruye la conexión emocional y fortalece tu relación desde adentro.</p>
+        <div class="service-link">Ver más →</div>
+      </a>
+      <a href="terapia-breve.html" class="service-card">
+        <span class="service-icon">⚡</span>
+        <h3>Terapia Breve</h3>
+        <p>Enfoque orientado a soluciones. Resultados concretos en pocas sesiones, sin años de proceso indefinido.</p>
+        <div class="service-link">Ver más →</div>
+      </a>
+      <a href="duelo.html" class="service-card">
+        <span class="service-icon">🕊️</span>
+        <h3>Duelo y Pérdida</h3>
+        <p>Acompañamiento cercano en momentos difíciles. No estás solo/a en este proceso.</p>
+        <div class="service-link">Ver más →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="como-funciona">
+    <div style="text-align:center; margin-bottom:1rem;">
+      <div class="section-label">Proceso</div>
+      <h2 class="section-title">Así de <em>sencillo</em> es empezar</h2>
+      <p class="section-sub" style="margin:0 auto;">Sin papeleos ni listas de espera. En menos de 24 horas podemos tener tu primera sesión.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="step-number">01</div>
+        <h3>Escríbeme</h3>
+        <p>Manda un mensaje por WhatsApp. Es gratis, sin compromiso y completamente confidencial.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-number">02</div>
+        <h3>Consulta gratuita</h3>
+        <p>15 minutos para conocernos, entender lo que necesitas y ver si hay buena conexión.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-number">03</div>
+        <h3>Agenda tu sesión</h3>
+        <p>Elegimos horario y modalidad: presencial en San Antonio o videollamada para México.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-number">04</div>
+        <h3>Empieza el cambio</h3>
+        <p>Sesiones prácticas, humanas y orientadas a resultados. Sin rodeos, con foco real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALITIES -->
+  <section class="modalities">
+    <div class="section-label">Modalidades de atención</div>
+    <h2 class="section-title">Donde estés,<br>te acompaño</h2>
+    <div class="modalities-grid">
+      <div class="modality-card">
+        <span class="modality-flag">🇺🇸</span>
+        <h3>Presencial</h3>
+        <div class="subtitle">San Antonio, Texas</div>
+        <p>Sesiones cara a cara en San Antonio, TX. Ideal si prefieres el contacto humano directo en un espacio cálido y privado.</p>
+        <div class="modality-tags">
+          <span class="tag">Individual</span>
+          <span class="tag">Pareja</span>
+          <span class="tag">En inglés o español</span>
+        </div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-flag">🇲🇽</span>
+        <h3>En Línea</h3>
+        <div class="subtitle">México · Monterrey · Todo el país</div>
+        <p>Terapia por videollamada desde la comodidad de tu hogar. Misma calidad, misma calidez, sin necesidad de desplazarte.</p>
+        <div class="modality-tags">
+          <span class="tag">Zoom / Meet</span>
+          <span class="tag">Horarios flexibles</span>
+          <span class="tag">Todo México</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE CONSULT CTA -->
+  <section class="free-cta">
+    <div class="free-cta-box">
+      <div class="free-pill">🎁 Oferta especial</div>
+      <h2>Tu primera consulta<br>es <em>gratuita</em></h2>
+      <p>15 minutos sin costo para conocernos y ver si hay buena conexión. Sin compromiso, sin presión. Solo una conversación honesta.</p>
+      <a href="https://wa.me/528116152929" class="btn-primary" style="display:inline-flex;" target="_blank">
+        💬 Reservar consulta gratuita
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre-mi">
+    <div class="about-image">
+      <img src="img/kathia.jpg" alt="Psicóloga Kathia Urdiaín" />
+    </div>
+    <div>
+      <div class="section-label">Sobre mí</div>
+      <h2 class="section-title">Soy Kathia,<br><em>tu psicóloga</em></h2>
+      <p style="font-size:0.95rem; color:var(--mid-grey); line-height:1.8; margin-bottom:1.5rem;">
+        Con más de 10 años de experiencia clínica, me especializo en terapia breve orientada a soluciones. Mi enfoque es práctico, humano y directo: no vine a escucharte sin más, vine a ayudarte a <strong>sentirte mejor de verdad</strong>.
+      </p>
+      <p style="font-size:0.95rem; color:var(--mid-grey); line-height:1.8; margin-bottom:2rem;">
+        Atiendo en español e inglés, tanto de forma presencial en San Antonio como en línea para pacientes en México y Latinoamérica.
+      </p>
+      <div class="credentials">
+        <div class="credential">Licenciatura en Psicología Clínica</div>
+        <div class="credential">Especialidad en Terapia Breve Orientada a Soluciones</div>
+        <div class="credential">Más de 10 años de práctica clínica</div>
+        <div class="credential">Atención bilingüe: español e inglés</div>
+        <div class="credential">Cédula profesional verificada</div>
+      </div>
+      <a href="sobre-mi.html" class="btn-secondary" style="display:inline-flex; margin-top:1rem;">Conoce más sobre mí →</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonios">
+    <div class="testimonials-header">
+      <div class="section-label">Testimonios</div>
+      <h2 class="section-title">Lo que dicen mis <em>pacientes</em></h2>
+      <p class="section-sub">Historias reales de personas que dieron el primer paso.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">Llevaba años con ansiedad y nunca había encontrado a alguien que realmente entendiera lo que sentía. Con Kathia vi cambios desde la segunda sesión. Su enfoque es diferente, muy práctico.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Mariana R.</div>
+            <div class="author-detail">Monterrey, México · Terapia en línea</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">Fui escéptico al principio, pero la terapia breve realmente funciona. En 8 sesiones logré manejar el estrés del trabajo de una forma que no creí posible. 100% recomendado.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Carlos M.</div>
+            <div class="author-detail">San Antonio, TX · Sesión presencial</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">Mi esposo y yo estábamos al borde del divorcio. Kathia nos ayudó a reconectar y a comunicarnos de verdad. Fue la mejor decisión que tomamos como pareja.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Ana y Roberto S.</div>
+            <div class="author-detail">CDMX · Terapia de pareja en línea</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div style="text-align:center; margin-bottom:0.5rem;">
+      <div class="section-label">Preguntas frecuentes</div>
+      <h2 class="section-title">Todo lo que necesitas <em>saber</em></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cuánto cuesta una sesión?</button>
+        <div class="faq-answer"><p>Los precios varían según modalidad y país. Escríbeme por WhatsApp para obtener información actualizada. Ofrezco opciones accesibles y planes de seguimiento.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cuántas sesiones necesitaré?</button>
+        <div class="faq-answer"><p>La terapia breve está diseñada para generar cambios en 6 a 12 sesiones. Muchos pacientes notan mejoras significativas desde la segunda o tercera sesión.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Las sesiones son confidenciales?</button>
+        <div class="faq-answer"><p>Sí, completamente. Todo lo que se habla en sesión es estrictamente confidencial, salvo situaciones de riesgo vital reguladas por ley.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cómo son las sesiones en línea?</button>
+        <div class="faq-answer"><p>Por videollamada a través de Zoom o Google Meet. Solo necesitas conexión a internet y un espacio privado. La experiencia es igual de efectiva que la presencial.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Atiendes en inglés?</button>
+        <div class="faq-answer"><p>Sí, ofrezco sesiones bilingüe en español e inglés. Ideal para pacientes en San Antonio, Texas o hispanohablantes en Estados Unidos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cómo agendo mi primera cita?</button>
+        <div class="faq-answer"><p>Muy sencillo: escríbeme por WhatsApp. En menos de 24 horas coordinamos tu consulta gratuita de 15 minutos y tu primera sesión.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Kathia Urdiaín</div>
+        <p class="footer-tagline">Psicóloga clínica especialista en terapia breve.<br>Presencial en San Antonio, TX · En línea para México.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/528116152929" class="social-btn" target="_blank">💬</a>
+          <a href="contacto.html" class="social-btn">✉️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Especialidades</div>
+        <ul class="footer-links">
+          <li><a href="ansiedad.html">Ansiedad</a></li>
+          <li><a href="depresion.html">Depresión</a></li>
+          <li><a href="estres.html">Estrés</a></li>
+          <li><a href="pareja.html">Terapia de pareja</a></li>
+          <li><a href="terapia-breve.html">Terapia breve</a></li>
+          <li><a href="duelo.html">Duelo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Información</div>
+        <ul class="footer-links">
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="index-en.html">English version 🇺🇸</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kathia Urdiaín · Psicóloga. Todos los derechos reservados.</span>
+      <span>San Antonio, TX 🇺🇸 · México 🇲🇽</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/528116152929" class="whatsapp-float" target="_blank" title="Escríbeme por WhatsApp">💬</a>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .how-step, .testimonial-card, .modality-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

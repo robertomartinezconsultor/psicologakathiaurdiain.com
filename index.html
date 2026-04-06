@@ -3598,7 +3598,37 @@ function sendBookingWhatsApp() {
   if (bookingData.modality) msg += `Modalidad: ${bookingData.modality}\n`;
   if (bookingData.schedule) msg += `Horario preferido: ${bookingData.schedule}\n`;
 
+  // Send email to Kathia via Formspree (roberto's account, forwards to katy_urdian@hotmail.com)
+  fetch('https://formspree.io/f/mwvwvqoq', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _replyto: email || 'sin-email@cliente.com',
+      _subject: '🗓 Nueva Cita - ' + name + ' - PsicologaKathiaUrdiain.com',
+      _cc: 'katy_urdian@hotmail.com',
+      nombre: name,
+      telefono: phone,
+      email_cliente: email,
+      tema: bookingData.reason || 'No especificado',
+      modalidad: bookingData.modality || 'No especificada',
+      horario: bookingData.schedule || 'No especificado',
+      mensaje_completo: msg,
+      fuente: 'psicologakathiaurdiain.com - Booking Wizard'
+    })
+  }).catch(() => {});
+
+  // Also open WhatsApp
   window.open(`https://wa.me/528116152929?text=${encodeURIComponent(msg)}`, '_blank');
+
+  // Show confirmation
+  const wizard = document.querySelector('.booking-wizard');
+  if (wizard) {
+    wizard.innerHTML = `<div style="text-align:center;padding:40px 20px;">
+      <div style="font-size:48px;margin-bottom:16px;">✓</div>
+      <h3 style="font-family:var(--fd);font-size:1.5rem;margin-bottom:8px;">¡Solicitud Enviada!</h3>
+      <p style="color:var(--grey);font-size:0.9rem;">Kathia recibió tu solicitud por email y WhatsApp.<br>Te contactará en las próximas 24 horas.</p>
+    </div>`;
+  }
 }
 
 /* ═══════════════════════════════════════════

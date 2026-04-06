@@ -1952,14 +1952,14 @@ input, textarea, select { font-family: var(--font-body); }
       <div class="nav-dropdown">
         <a href="#servicios" data-i18n="nav_services">Servicios</a>
         <div class="nav-dropdown-menu">
-          <a href="#servicios" data-i18n="nav_kids">Ninos (3-12)</a>
-          <a href="#servicios" data-i18n="nav_teens">Adolescentes (13-17)</a>
-          <a href="#servicios" data-i18n="nav_adults">Adultos</a>
-          <a href="#servicios" data-i18n="nav_couples">Parejas</a>
+          <a href="servicios/ninos.html" data-i18n="nav_kids">Ninos (3-12)</a>
+          <a href="servicios/adolescentes.html" data-i18n="nav_teens">Adolescentes (13-17)</a>
+          <a href="servicios/adultos.html" data-i18n="nav_adults">Adultos</a>
+          <a href="servicios/parejas.html" data-i18n="nav_couples">Parejas</a>
         </div>
       </div>
       <a href="#enfoque" data-i18n="nav_approach">Mi enfoque</a>
-      <a href="#sobre-mi" data-i18n="nav_about">Sobre mi</a>
+      <a href="sobre-kathia.html" data-i18n="nav_about">Sobre mi</a>
       <a href="#articulos" data-i18n="nav_articles">Articulos</a>
       <a href="#faq-section" data-i18n="nav_faq">FAQ</a>
       <a href="#contacto" data-i18n="nav_contact">Contacto</a>
@@ -1983,7 +1983,7 @@ input, textarea, select { font-family: var(--font-body); }
 <div class="mobile-menu" id="mobile-menu">
   <a href="#servicios" onclick="toggleMobile()" data-i18n="nav_services">Servicios</a>
   <a href="#enfoque" onclick="toggleMobile()" data-i18n="nav_approach">Mi enfoque</a>
-  <a href="#sobre-mi" onclick="toggleMobile()" data-i18n="nav_about">Sobre mi</a>
+  <a href="sobre-kathia.html" onclick="toggleMobile()" data-i18n="nav_about">Sobre mi</a>
   <a href="#articulos" onclick="toggleMobile()" data-i18n="nav_articles">Articulos</a>
   <a href="#faq-section" onclick="toggleMobile()" data-i18n="nav_faq">FAQ</a>
   <a href="#contacto" onclick="toggleMobile()" data-i18n="nav_contact">Contacto</a>
@@ -2172,7 +2172,7 @@ input, textarea, select { font-family: var(--font-body); }
           <li data-i18n="svc_kids_3">Ansiedad infantil</li>
           <li data-i18n="svc_kids_4">Dificultades escolares</li>
         </ul>
-        <span class="service-expand" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></span>
+        <a href="servicios/ninos.html" class="service-expand" onclick="event.stopPropagation()" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></a>
         <div class="service-detail">
           <div class="service-detail-inner" data-i18n="svc_kids_detail">
             A traves de la terapia de juego, los ninos pueden expresar emociones que aun no saben nombrar. Trabajo con tecnicas ludicas y creativas adaptadas a la edad del nino, involucrando a la familia en el proceso terapeutico para lograr cambios duraderos en su entorno cotidiano.
@@ -2193,7 +2193,7 @@ input, textarea, select { font-family: var(--font-body); }
           <li data-i18n="svc_teens_3">Conflictos familiares</li>
           <li data-i18n="svc_teens_4">Presion social y escolar</li>
         </ul>
-        <span class="service-expand" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></span>
+        <a href="servicios/adolescentes.html" class="service-expand" onclick="event.stopPropagation()" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></a>
         <div class="service-detail">
           <div class="service-detail-inner" data-i18n="svc_teens_detail">
             La adolescencia es una etapa de grandes cambios. Ofrezco un espacio seguro donde los jovenes pueden explorar sus emociones, desarrollar habilidades de afrontamiento y fortalecer su identidad. Trabajo con enfoques actuales que conectan con la realidad digital de los adolescentes.
@@ -2214,7 +2214,7 @@ input, textarea, select { font-family: var(--font-body); }
           <li data-i18n="svc_adults_3">TDAH y concentracion</li>
           <li data-i18n="svc_adults_4">Estres y burnout</li>
         </ul>
-        <span class="service-expand" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></span>
+        <a href="servicios/adultos.html" class="service-expand" onclick="event.stopPropagation()" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></a>
         <div class="service-detail">
           <div class="service-detail-inner" data-i18n="svc_adults_detail">
             Con tecnicas de CBT y terapia breve centrada en soluciones, te ayudo a identificar patrones de pensamiento que te limitan y a desarrollar estrategias concretas para mejorar tu calidad de vida. Resultados reales en 8-12 sesiones.
@@ -2235,7 +2235,7 @@ input, textarea, select { font-family: var(--font-body); }
           <li data-i18n="svc_couples_3">Distanciamiento emocional</li>
           <li data-i18n="svc_couples_4">Infidelidad y reconciliacion</li>
         </ul>
-        <span class="service-expand" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></span>
+        <a href="servicios/parejas.html" class="service-expand" onclick="event.stopPropagation()" data-i18n="svc_more">Mas informacion <span class="service-expand-arrow">&rarr;</span></a>
         <div class="service-detail">
           <div class="service-detail-inner" data-i18n="svc_couples_detail">
             Los conflictos de pareja pueden originarse por falta de comunicacion, confianza o desacuerdos recurrentes. En terapia trabajamos en mejorar la escucha activa, establecer acuerdos y fortalecer la empatia para que ambos se sientan escuchados y respetados.
@@ -2672,7 +2672,7 @@ input, textarea, select { font-family: var(--font-body); }
           </div>
           <h3 data-i18n="art_1_title">10 senales de que necesitas terapia</h3>
           <p data-i18n="art_1_excerpt">Reconocer que necesitas ayuda profesional es el primer paso hacia tu bienestar. Estas son las senales mas comunes que no debes ignorar.</p>
-          <a href="#" class="article-link" data-i18n="art_read_more">Leer articulo &rarr;</a>
+          <a href="articulos/senales-terapia.html" class="article-link" data-i18n="art_read_more">Leer articulo &rarr;</a>
         </div>
       </div>
 
@@ -2686,7 +2686,7 @@ input, textarea, select { font-family: var(--font-body); }
           </div>
           <h3 data-i18n="art_2_title">Funciona la terapia online?</h3>
           <p data-i18n="art_2_excerpt">La evidencia cientifica respalda la efectividad de la terapia en linea. Te explico por que puede ser la opcion ideal para ti.</p>
-          <a href="#" class="article-link" data-i18n="art_read_more">Leer articulo &rarr;</a>
+          <a href="articulos/terapia-online-funciona.html" class="article-link" data-i18n="art_read_more">Leer articulo &rarr;</a>
         </div>
       </div>
 
@@ -2700,7 +2700,7 @@ input, textarea, select { font-family: var(--font-body); }
           </div>
           <h3 data-i18n="art_3_title">Como ayudar a un nino con ansiedad</h3>
           <p data-i18n="art_3_excerpt">Estrategias practicas que puedes aplicar en casa para apoyar a tu hijo cuando siente ansiedad o miedo.</p>
-          <a href="#" class="article-link" data-i18n="art_read_more">Leer articulo &rarr;</a>
+          <a href="articulos/ansiedad-ninos.html" class="article-link" data-i18n="art_read_more">Leer articulo &rarr;</a>
         </div>
       </div>
     </div>
